@@ -1,0 +1,169 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Промислові прототипи",
+      "description": "Для випробування зразків перед початком виробництва",
+      "imgPath": "/products/gear.png"
+    },
+    {
+      "id": 2,
+      "title": "Архітектурні макети",
+      "description": "Для наочної презентації ваших проектів",
+      "imgPath": "/products/tower.png"
+    },
+    {
+      "id": 3,
+      "title": "Ювелірні вироби",
+      "description": "Для надання індивідуального стилю",
+      "imgPath": "/products/rings.png"
+    },
+    {
+      "id": 4,
+      "title": "Скульптури",
+      "description": "Для творчої декорації інтер'єру",
+      "imgPath": "/products/sculpture.png"
+    },
+    {
+      "id": 5,
+      "title": "Інженерні деталі",
+      "description": "Для втілення у життя сміливих ідей",
+      "imgPath": "/products/details.png"
+    },
+    {
+      "id": 6,
+      "title": "Презентаційні макети",
+      "description": "Для демонстрації на виставках чи на вітринах",
+      "imgPath": "/products/layout.png"
+    },
+    {
+      "id": 7,
+      "title": "Медичні та освітні моделі",
+      "description": "Для використання як навчальний посібник",
+      "imgPath": "/products/skull.png"
+    },
+    {
+      "id": 8,
+      "title": "Автозапчастини",
+      "description": "Для заміни рідкісних чи знятих із виробництва деталей",
+      "imgPath": "/products/piston.png"
+    },
+    {
+      "id": 9,
+      "title": "Сувенірна продукція",
+      "description": "Для використання як навчальний посібник",
+      "imgPath": "/products/souvenir.png"
+    }
+  ],
+  "materials": [
+    {
+      "id": 1,
+      "title": "ABS PRO (FDM)",
+      "description": "ABS PRO (FDM) - технічний термопластичний пластик, ударостійкий, на основі співполімеру крилонітрилу, бутадієну та стиролу."
+    },
+    {
+      "id": 2,
+      "title": "PLA (FDM)",
+      "description": "PLA - термопластичний пластик, виготовлений з кукурудзяних крохмалів. Це екологічно чистий матеріал, легкий у використанні та має низький вміст токсинів."
+    },
+    {
+      "id": 3,
+      "title": "ELASTAN (FDM)",
+      "description": "ELASTAN - гнучкий та еластичний термопластичний пластик, придатний для створення гнучких або рухливих моделей."
+    },
+    {
+      "id": 4,
+      "title": "COPET (FDM)",
+      "description": "COPET - технічний пластик, володіє високою твердістю та стійкістю до зносу. Зазвичай використовується для виготовлення міцних та деталей з великою точністю."
+    },
+    {
+      "id": 5,
+      "title": "NYLON CARBON (FDM)",
+      "description": "NYLON CARBON - поєднання нейлону та вуглецевих волокон. Має високу міцність та стійкість."
+    },
+    {
+      "id": 6,
+      "title": "TANGO (POLYJET)",
+      "description": "TANGO - матеріал для PolyJet-друку, який відомий своєю м'якістю та еластичністю. Використовується для створення гнучких, гладких моделей."
+    },
+    {
+      "id": 7,
+      "title": "VERO WHITE (POLYJET)",
+      "description": "VERO WHITE - матеріал для PolyJet, який надає високу роздільну здатність та стійкість."
+    },
+    {
+      "id": 8,
+      "title": "VERO CLEAR (POLYJET)",
+      "description": "VERO CLEAR - прозорий матеріал для PolyJet, ідеально підходить для виготовлення прозорих та променевих моделей."
+    }
+  ],
+  "printers": [
+    {
+      "id": 1,
+      "title": "Neor Basic",
+      "description": "Функції налаштування друку дозволяють максимально відтворити точність ескізу моделі."
+    },
+    {
+      "id": 2,
+      "title": "Creality Ender-3 S1 Pro",
+      "description": "Варіант 3D-принтера Ender-3 S1 із підвищеною температурою екструзії, що дозволяє працювати з ширшим спектром витратних матеріалів."
+    },
+    {
+      "id": 3,
+      "title": "Weedo Tina2",
+      "description": "Всі новаторські ідеї будуть реалізовані за допомогою 3D-друку. Покращуйте тривимірне просторове сприйняття та уяву, торкаючись тривимірних моделей."
+    },
+    {
+      "id": 4,
+      "title": "Elegoo Jupiter",
+      "description": "3D-принтер Elegoo Jupiter 12.8” 6K Mono LCD один із найбільших у лінійці фотополімерних принтерів Elegoo. За допомогою Elegoo Jupiter можна легко друкувати великоформатні, високоточні і складні деталі."
+    },
+    {
+      "id": 5,
+      "title": "Elegoo Mars 4 DLP",
+      "description": "3D принтер Elegoo Mars 4 DLP працює на основі технології DLP. Проектор має більш тривалий термін служби, ніж РК-екрани (понад 20 000 годин). РК-екран має ресурс використання у 10 разів менше (близько 2000 годин). "
+    }
+  ],
+  "slides": [
+    {
+      "id": 1,
+      "title": "Промислові прототипи",
+      "technology": "FDM",
+      "imgPath": "/slides/industrial.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Архітектурні макети",
+      "technology": "SLA",
+      "imgPath": "/slides/character.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Ювелірні вироби",
+      "technology": "SLA",
+      "imgPath": "/slides/models.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Промислові прототипи",
+      "technology": "FDM",
+      "imgPath": "/slides/industrial.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Архітектурні макети",
+      "technology": "SLA",
+      "imgPath": "/slides/character.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Ювелірні вироби",
+      "technology": "SLA",
+      "imgPath": "/slides/models.jpg"
+    }
+  ],
+  "formData": [],
+  "questionData": [],
+  "priceData": [],
+  "contactData": []
+}

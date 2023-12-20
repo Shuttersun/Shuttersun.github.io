@@ -1,0 +1,51 @@
+@import "../../styles/variables.scss";
+
+.sub-promo {
+  height: 350px;
+  padding: 24px 15px 0;
+  background: url("../../assets//img/subpromo-bg.jpg") no-repeat;
+  background-size: 100% 400px;
+
+  &__container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 195px;
+      right: -180px;
+      width: 98px;
+      height: 149px;
+      background: url("../../assets/img/ellipse1.svg") no-repeat;
+      background-position: center;
+    }
+  }
+  &__title {
+    margin-top: 80px;
+    margin-bottom: 192px;
+    font-size: 48px;
+    font-weight: 800;
+    text-align: left;
+    span {
+      color: $main_color;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sub-promo {
+    background-size: 250% 400px;
+  }
+}
+
+@media (max-width: 426px) {
+  .sub-promo {
+    background-size: 200% 400px;
+    background-position: center;
+    &__title {
+      margin-top: 70px;
+      font-size: 30px;
+    }
+  }
+}

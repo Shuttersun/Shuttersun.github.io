@@ -1,0 +1,25 @@
+.input-error-message {
+  margin: 3px 0;
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: right;
+  color: #eb5757;
+  opacity: 0;
+  transform: translateY(-250%);
+  animation: show 0.2s forwards;
+}
+
+@keyframes show {
+  0% {
+    transform: translateY(-250%);
+  }
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

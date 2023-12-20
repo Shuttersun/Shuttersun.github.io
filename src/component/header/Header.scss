@@ -1,0 +1,282 @@
+@import "../../styles/variables.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  height: 48px;
+  &__logo {
+    height: 31px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+  &__link {
+    position: relative;
+    margin-right: 72px;
+    padding: 5px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #2c2f36;
+    text-decoration: none;
+    transition: 0.2s;
+    overflow: hidden;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 0;
+      height: 2px;
+      border-radius: 1.8px;
+      background-color: $main_color;
+    }
+    &.active {
+      color: $main_color;
+    }
+    &:hover {
+      color: $main_color;
+      &::before {
+        animation: linkHoverOutgoingLine 1.1s forwards;
+      }
+      &::after {
+        animation: linkHoverIncomingLine 0.7s 1.1s forwards;
+      }
+    }
+  }
+  &__hamburger {
+    position: relative;
+    display: none;
+    width: 40px;
+    height: 22px;
+    cursor: pointer;
+    &.active {
+      animation: hamburgerRotate 0.3s linear 0.5s forwards;
+      div {
+        animation: centerMove 0.2s linear forwards;
+      }
+      &::before {
+        animation: bottomMove 0.4s linear 0.1s forwards;
+      }
+      &::after {
+        animation: topMove 0.4s linear 0.1s forwards;
+      }
+    }
+    div {
+      position: absolute;
+      top: calc(50% - 1.5px);
+      width: 100%;
+      height: 3px;
+      border-radius: 1.5px;
+      background-color: $main_color;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      border-radius: 1.5px;
+      background-color: $main_color;
+    }
+    &::before {
+      bottom: 0;
+    }
+  }
+}
+
+.side-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  height: 100vh;
+  width: 400px;
+  padding: 50px;
+  background-color: #b5d5f9;
+  transition: 0.4s;
+  transform: translateX(100%);
+  &.activePanel {
+    transform: translateX(0);
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    list-style: none;
+  }
+  &__link {
+    padding: 10px 0;
+    overflow: hidden;
+    a {
+      position: relative;
+      padding: 5px 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: #2c2f36;
+      text-decoration: none;
+      transition: 0.2s;
+      overflow: hidden;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0;
+        height: 2px;
+        border-radius: 1.8px;
+        background-color: $main_color;
+      }
+      &:hover {
+        color: $main_color;
+        &::before {
+          animation: linkHoverOutgoingLine 1.1s forwards;
+        }
+        &::after {
+          animation: linkHoverIncomingLine 0.7s 1.1s forwards;
+        }
+      }
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 1px;
+      content: "";
+      width: calc(100% - 2px);
+      height: 1px;
+      background-color: black;
+    }
+    &::before {
+      rotate: 45deg;
+    }
+    &::after {
+      rotate: -45deg;
+    }
+  }
+}
+
+@keyframes centerMove {
+  0% {
+    transform: translateX(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateX(50%);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes bottomMove {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  50% {
+    transform: translate(0, -9px) rotate(0);
+  }
+
+  100% {
+    transform: translate(0, -9px) rotate(45deg);
+  }
+}
+
+@keyframes topMove {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  50% {
+    transform: translate(0, 9px) rotate(0);
+  }
+
+  100% {
+    transform: translate(0, 9px) rotate(-45deg);
+  }
+}
+
+@keyframes hamburgerRotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    &__link {
+      margin-right: 36px;
+    }
+  }
+}
+
+@media (max-width: 853px) {
+  .header {
+    &__nav {
+      display: none;
+    }
+    &__hamburger {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .side-panel {
+    width: 100%;
+    padding: 50px 15px;
+  }
+}
+
+@keyframes linkHoverOutgoingLine {
+  0% {
+    width: 100%;
+    transform: translateX(-110%);
+  }
+  50% {
+    width: 100%;
+    transform: translateX(0);
+  }
+  100% {
+    width: 100%;
+    transform: translateX(110%);
+  }
+}
+
+@keyframes linkHoverIncomingLine {
+  0% {
+    width: 100%;
+    transform: translateX(-110%);
+  }
+  100% {
+    width: 100%;
+    transform: translateX(0);
+  }
+}

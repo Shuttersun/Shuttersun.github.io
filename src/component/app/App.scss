@@ -1,0 +1,53 @@
+.App {
+  height: 100%;
+  text-align: center;
+  a {
+    text-decoration: none;
+  }
+  overflow: hidden;
+}
+
+@media (max-width: 1029px) {
+  .section-calc-form {
+    background-size: 200% 820px;
+    &__container {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .section-calc-form {
+    padding-top: 250px;
+    padding-bottom: 100px;
+    background-size: 200% 820px;
+    background-position: center 100px;
+    &__container {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .section-calc-form {
+    padding-top: 230px;
+    background-size: 300% 820px;
+    background-position: center 115px;
+    &__container {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .section-question-form {
+    &__container {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

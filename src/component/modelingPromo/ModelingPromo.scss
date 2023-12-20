@@ -1,0 +1,87 @@
+@import "../../styles/variables.scss";
+
+.modeling-promo {
+  padding: 90px 15px 180px;
+  &__container {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  &__content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 198px;
+      left: -360px;
+      width: 280px;
+      height: 415px;
+      background: url("../../assets/img/ellipse2.svg") no-repeat;
+      background-position: center;
+    }
+  }
+  &__develop {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    max-width: 550px;
+    padding-bottom: 50px;
+    text-align: left;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 72px;
+      height: 3px;
+      background-color: $main_color;
+      border-radius: 1.5px;
+    }
+  }
+  &__description {
+    font-size: 24px;
+    line-height: 33.6px;
+    font-weight: 400;
+  }
+  &__description-info {
+    font-size: 16px;
+    line-height: 24.4px;
+    font-weight: 500;
+  }
+  &__sphere {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    text-align: left;
+  }
+  &__sphere-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22.4px;
+  }
+  &__sphere-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+  &__sphere-item {
+    position: relative;
+    padding-left: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 33.36px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 4.5px);
+      left: 0;
+      width: 9px;
+      height: 9px;
+      border-radius: 100%;
+      background-color: $main_color;
+    }
+  }
+}

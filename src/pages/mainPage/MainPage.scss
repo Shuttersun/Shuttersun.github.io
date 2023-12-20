@@ -1,0 +1,107 @@
+.section-question-form {
+  padding: 0 15px 180px;
+  overflow: hidden;
+  &__container {
+    position: relative;
+    max-width: 1170px;
+    margin: 0 auto;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -90px;
+      right: 272px;
+      z-index: -1;
+      width: 18px;
+      height: 18px;
+      background: url("../../assets/img/ellipse9.svg") no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.section-calc-form {
+  padding: 381px 15px 180px;
+  background: url("../../assets/img/calc-form-bg.jpg") no-repeat;
+  background-position: center 185px;
+  background-size: 100% 820px;
+  overflow: hidden;
+  &__container {
+    position: relative;
+    max-width: 1170px;
+    margin: 0 auto;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -40%;
+      right: 0;
+      width: 172px;
+      height: 261px;
+      background: url("../../assets/img/ellipse6.svg");
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 128px;
+      left: 0;
+      width: 53px;
+      height: 53px;
+      background: url("../../assets/img/ellipse3.svg") no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+      transform: translateX(-70%);
+    }
+  }
+  &__small-ellipse {
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    background: url("../../assets/img/ellipse7.svg") no-repeat;
+    transform: translateX(139px);
+  }
+}
+
+@media (max-width: 1029px) {
+  .section-calc-form {
+    background-size: 200% 820px;
+    &__container {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .section-calc-form {
+    padding-top: 250px;
+    background-size: 200% 820px;
+    background-position: center 100px;
+    &__container {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .section-calc-form {
+    padding-top: 230px;
+    background-size: 300% 820px;
+    background-position: center 115px;
+    &__container {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .section-question-form {
+    &__container {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

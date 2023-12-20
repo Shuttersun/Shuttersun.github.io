@@ -1,0 +1,135 @@
+@import "../../styles/variables.scss";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 415px;
+  padding: 140px 15px 0;
+  background: url("../../assets/img/footer-bg.jpg") no-repeat;
+  background-size: 100% 415px;
+  background-position: center;
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+  }
+  &__left {
+    display: flex;
+    gap: 0 75px;
+  }
+  &__nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__nav-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2c2f36;
+    transition: 0.3s;
+    &:hover {
+      color: $main_color;
+    }
+  }
+  &__nav-link:not(:last-child) {
+    margin-bottom: 13px;
+  }
+  &__right {
+    display: flex;
+    gap: 0 89px;
+  }
+  &__phone {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+  &__address {
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+  }
+  &__mail {
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $main_hover;
+    text-align: left;
+  }
+  &__social {
+    display: flex;
+    gap: 0 24px;
+  }
+  &__social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    background-color: #e9ebf1;
+    transition: 0.3s;
+    &:hover {
+      background-color: #bec2cd;
+      a {
+        svg {
+          scale: 1.3;
+        }
+      }
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      svg {
+        transition: scale 0.3s;
+      }
+    }
+  }
+}
+
+@media (max-width: 890px) {
+  .footer {
+    background-size: 250% 415px;
+    &__wrapper {
+      flex-direction: column;
+      gap: 30px 0;
+      align-items: center;
+    }
+    &__nav-links {
+      flex-direction: row;
+      gap: 15px;
+    }
+  }
+}
+
+@media (max-width: 517px) {
+  .footer {
+    &__left {
+      flex-direction: column;
+      gap: 20px 0;
+    }
+    &__right {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__contacts {
+      align-items: center;
+    }
+    &__nav-links {
+      flex-direction: row;
+      gap: 10px;
+    }
+  }
+}

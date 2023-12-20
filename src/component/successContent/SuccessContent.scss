@@ -1,0 +1,22 @@
+.success-wrapper {
+  display: none;
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+  width: 425px;
+  height: 425px;
+  &.show {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.success-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 292px;
+  height: 302px;
+  text-align: center;
+}

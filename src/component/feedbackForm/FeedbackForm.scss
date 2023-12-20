@@ -1,0 +1,62 @@
+@import "../../styles/variables.scss";
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  &__name-wrapper,
+  &__phone-wrapper,
+  &__textarea-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+  }
+  &__name-wrapper,
+  &__phone-wrapper {
+    input {
+      padding: 15px 24px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 19.6px;
+      border-radius: 7px;
+      border: 1px solid #eceef1;
+      background: #f9fafb;
+    }
+    input::placeholder {
+      color: #959cac;
+    }
+  }
+
+  &__textarea-wrapper {
+    margin-bottom: 26px;
+    textarea {
+      height: 129px;
+      padding: 15px 24px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 19.6px;
+      border-radius: 7px;
+      border: 1px solid #eceef1;
+      background: #f9fafb;
+      resize: none;
+      font-family: "Gilroy";
+    }
+    textarea::placeholder {
+      color: #959cac;
+    }
+  }
+  &__submit-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__confidentiality-policy {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16.8px;
+    color: #959cac;
+    span {
+      color: $main_hover;
+    }
+  }
+}

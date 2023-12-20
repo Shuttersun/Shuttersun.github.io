@@ -1,0 +1,159 @@
+@import "../../styles/variables.scss";
+
+.price-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 44px 40px;
+  border-radius: 35px;
+  background: #fff;
+  box-shadow: 0px 4px 68px 0px rgba(33, 33, 33, 0.06);
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 32px;
+    text-align: left;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 800;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__contact {
+    display: flex;
+    gap: 30px;
+    input {
+      max-width: 280px;
+      width: 100%;
+      padding: 15px 24px;
+      border-radius: 7px;
+      border: 1px solid #eceef1;
+      background: #f9fafb;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 19.6px;
+    }
+  }
+  &__mail-wrapper {
+    display: flex;
+    flex-direction: column;
+    input {
+      width: 100%;
+      padding: 15px 24px;
+      border-radius: 7px;
+      border: 1px solid #eceef1;
+      background: #f9fafb;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 19.6px;
+    }
+  }
+  &__name-wrapper,
+  &__phone-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    input {
+      min-width: 100%;
+    }
+  }
+
+  &__upload-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__upload-text {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22.4px;
+  }
+  &__upload {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    input {
+      display: none;
+    }
+    span {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 19.6px;
+      color: #96979b;
+      transition: 0.3s;
+    }
+    span.active {
+      color: $main_color;
+    }
+    span.error {
+      color: #eb5757;
+    }
+  }
+  &__upload-btn {
+    padding: 14px 24px;
+    border-radius: 37px;
+    background-color: $gray;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22.4px;
+    color: #fff;
+    cursor: pointer;
+  }
+  &__textarea {
+    min-height: 129px;
+    margin-bottom: 37px;
+    padding: 15px 24px;
+    border-radius: 7px;
+    border: 1px solid #eceef1;
+    background: #f9fafb;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.6px;
+    font-family: "Gilroy";
+    resize: none;
+  }
+}
+
+@media (max-width: 555px) {
+  .price-form {
+    &__contact {
+      flex-direction: column;
+      gap: 20px;
+    }
+    &__upload-wrapper {
+      flex-direction: column;
+      gap: 20px;
+    }
+    &__upload-text {
+      align-self: flex-start;
+    }
+    &__upload {
+      align-self: flex-end;
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .price-form {
+    padding: 40px 20px;
+    &__upload {
+      flex-direction: column;
+      flex: 1;
+
+      min-width: 100%;
+      span {
+        align-self: flex-start;
+      }
+      label {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

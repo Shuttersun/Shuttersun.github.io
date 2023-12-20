@@ -1,0 +1,54 @@
+@import "./variables.scss";
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../assets/fonts/Gilroy-ExtraBold.woff") format("woff"),
+    url("../assets/fonts/Gilroy-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../assets/fonts/Gilroy-Bold.woff") format("woff"),
+    url("../assets/fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../assets/fonts/Gilroy-Medium.woff") format("woff"),
+    url("../assets/fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../assets/fonts/Gilroy-Regular.woff") format("woff"),
+    url("../assets/fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline-color: $main_color;
+}
+
+@import "./variables.scss";
+
+html {
+  font-family: "Gilroy";
+  font-weight: 400;
+  color: $dark;
+}
+
+button {
+  font-family: "Gilroy";
+}

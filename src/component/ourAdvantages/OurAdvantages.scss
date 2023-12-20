@@ -1,0 +1,107 @@
+.our-advantages {
+  padding: 180px 15px 0;
+  overflow: hidden;
+  &__container {
+    position: relative;
+    max-width: 1170px;
+    margin: 0 auto;
+    &::before {
+      position: relative;
+      content: "";
+      position: absolute;
+      top: -85px;
+      left: 122px;
+      width: 40px;
+      height: 40px;
+      background: url("../../assets//img/ellipse3.svg") no-repeat;
+      background-size: cover;
+    }
+    &::after {
+      position: relative;
+      content: "";
+      position: absolute;
+      top: 201px;
+      left: -143px;
+      width: 30px;
+      height: 30px;
+      background: url("../../assets//img/ellipse7.svg") no-repeat;
+      background-size: cover;
+    }
+  }
+  &__advantages-list {
+    display: grid;
+    grid-template: repeat(2, 201px) / repeat(auto-fill, minmax(370px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+  }
+  &__title {
+    font-size: 48px;
+    font-weight: 800;
+    text-align: left;
+  }
+  &__advantages-card:not(:first-child) {
+    display: flex;
+    column-gap: 32px;
+    min-height: 100%;
+    padding: 32px 45px 37px 32px;
+    border-radius: 30px;
+    text-align: left;
+    background: url("../../assets/img/mini-card-bg.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    img {
+      width: 98px;
+      height: 98px;
+    }
+  }
+  &__card-description {
+    display: flex;
+    flex-direction: column;
+  }
+  &__card-title {
+    flex: 0 52px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.2px;
+  }
+  &__card-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-advantages {
+    &__container {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .our-advantages {
+    &__title {
+      font-size: 30px;
+    }
+    &__advantages-list {
+      grid-template: 100px repeat(auto-fill, 201px) / repeat(
+          auto-fill,
+          minmax(300px, 1fr)
+        );
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .our-advantages {
+    &__advantages-card:first-child {
+      justify-content: center;
+    }
+  }
+}

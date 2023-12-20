@@ -1,0 +1,49 @@
+@import "../../styles/variables.scss";
+
+.calc-form-module {
+  &__container {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  &__title {
+    margin-bottom: 64px;
+    font-size: 48px;
+    font-weight: 800;
+    text-align: left;
+    span {
+      color: $main_color;
+    }
+  }
+  &__content {
+    display: grid;
+    grid-template: 1fr / minmax(auto, 470px) minmax(auto, 670px);
+    justify-content: space-between;
+  }
+  &__form {
+    display: flex;
+    justify-content: center;
+    max-height: 645px;
+    min-height: 645px;
+    background-color: #fff;
+    border-radius: 35px;
+    box-shadow: 0px 4px 68px 0px rgba(33, 33, 33, 0.06);
+  }
+}
+
+@media (max-width: 1030px) {
+  .calc-form-module {
+    &__content {
+      grid-template: repeat(2, 1fr) / minmax(auto, 770px);
+      justify-content: center;
+      row-gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .calc-form-module {
+    &__title {
+      font-size: 30px;
+    }
+  }
+}

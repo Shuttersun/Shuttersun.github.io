@@ -1,0 +1,176 @@
+@import "../../styles/variables.scss";
+
+.contacts-page {
+  &__content {
+    padding: 130px 16px 180px 16px;
+  }
+  &__container {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  &__content {
+    display: flex;
+    gap: 90px;
+  }
+  &__feedback-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    flex: 1 0 auto;
+    max-width: 412px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  &__phone {
+    margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &__address,
+  &__mail {
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  &__mail {
+    color: $main_hover;
+  }
+  &__icon-wrapper {
+    display: flex;
+    gap: 23px;
+    margin-bottom: 60px;
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    background-color: #e9ebf1;
+    transition: 0.3s;
+    &:hover {
+      background-color: #bec2cd;
+      a {
+        svg {
+          scale: 1.3;
+        }
+      }
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      svg {
+        transition: scale 0.3s;
+      }
+    }
+  }
+  &__divider {
+    width: 100%;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: #f0f1f5;
+  }
+  &__form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    text-align: left;
+  }
+  &__form-title {
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  &__map-wrapper {
+    display: flex;
+    position: relative;
+    flex: 1;
+  }
+  &__map {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 682px;
+    max-height: 527px;
+    width: 100%;
+    height: 100%;
+    min-height: 527px;
+    background-color: #d7d9e0;
+    border-radius: 35px;
+    z-index: 10;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -100px;
+      left: 153px;
+      width: 30px;
+      height: 30px;
+      background: url("../../assets/img/ellipse7.svg") no-repeat;
+      background-position: center;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -452px;
+      left: 364px;
+      width: 160px;
+      height: 200px;
+      background: url("../../assets/img/ellipse5.svg") no-repeat;
+      background-position: center;
+    }
+  }
+  .bg {
+    position: absolute;
+    top: -53px;
+    left: 152px;
+    width: 726px;
+    height: 815px;
+    background: url("../../assets/img/contact-big-ellipse.png") no-repeat;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contacts-page {
+    &__content {
+      flex-direction: column;
+    }
+    &__feedback-wrapper {
+      flex: 0 1 auto;
+    }
+    &__map {
+      min-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .contacts-page {
+    &__content {
+      padding: 130px 16px 40px 16px;
+    }
+  }
+  .bg {
+    display: none;
+  }
+}
+
+@media (max-width: 321px) {
+  .contacts-page {
+    &__submit-wrapper {
+      button {
+        padding: 14px 80px;
+      }
+    }
+  }
+}

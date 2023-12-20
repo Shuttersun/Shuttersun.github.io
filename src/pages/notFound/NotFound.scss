@@ -1,0 +1,52 @@
+@import "../../styles/variables.scss";
+
+.not-found {
+  // height: 100vh;
+  padding: 87px 15px 30px 15px;
+  background: url("../../assets//img/not-found-bg.jpg") no-repeat;
+  &__container {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  &__title {
+    color: #2c2f36;
+    text-shadow: 0px 4px 68px rgba(33, 33, 33, 0.06);
+    font-size: 200px;
+    font-weight: 800;
+  }
+  &__description {
+    margin-bottom: 166px;
+  }
+  &__text {
+    margin-bottom: 14px;
+    color: $dark;
+    font-size: 36px;
+    font-weight: 800;
+  }
+  &__text--small {
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 426px) {
+  .not-found {
+    &__title {
+      font-size: 100px;
+    }
+    &__text {
+      font-size: 30px;
+    }
+    &__text--small {
+      font-size: 24px;
+    }
+  }
+}

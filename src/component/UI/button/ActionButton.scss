@@ -1,0 +1,48 @@
+@import "../../../styles/variables.scss";
+.action__button {
+  position: relative;
+  z-index: 100;
+  border: none;
+  border-radius: 88px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.2s;
+  outline-color: $main_hover;
+  background-color: transparent;
+  img {
+    position: absolute;
+    top: 15.5px;
+    left: 30px;
+    display: block;
+    width: 16px;
+    height: 16px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 88px;
+  }
+  div {
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s, opacity 0.2s 0.3s;
+    opacity: 0;
+  }
+  div.blob {
+    opacity: 1;
+    transition: width 0.8s, height 0.8s;
+  }
+}
