@@ -27,7 +27,7 @@ const Footer = () => {
                 to="/print"
                 className="footer__nav-link"
               >
-                3D-печать
+                3D-друк
               </NavLink>
               <NavLink
                 onClick={scrollToTop}

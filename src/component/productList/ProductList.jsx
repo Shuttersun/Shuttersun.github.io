@@ -6,8 +6,6 @@ import ProductItem from "../productItem/ProductItem";
 
 import "./ProductList.scss";
 
-const config = { mass: 5, tension: 2000, friction: 200 };
-
 const ProductList = () => {
   const { request } = useHttp();
   const [cards, setCards] = useState([]);
@@ -19,7 +17,7 @@ const ProductList = () => {
   }, []);
 
   const [ref, entry] = useIntersectionObserver({
-    threshold: 0,
+    threshold: 0.1,
     root: null,
     rootMargin: "0px",
   });
@@ -27,6 +25,7 @@ const ProductList = () => {
   const fromLeft = { opacity: 0, transform: "translateX(-100px)" };
   const fromRight = { opacity: 0, transform: "translateX(100px)" };
   const to = { opacity: 1, transform: "translate(0)" };
+  const config = { mass: 5, tension: 2000, friction: 200 };
 
   //Анімація компонента.
   const [titleProps, titleApi] = useSpring(() => ({
@@ -44,10 +43,11 @@ const ProductList = () => {
         config: { mass: 2, tension: 2000, friction: 900 },
         to,
       });
-      trailsApi.start({
-        delay: 500,
-        to,
-      });
+      setTimeout(() => {
+        trailsApi.start({
+          to,
+        });
+      }, 500);
     }
     // eslint-disable-next-line
   }, [entry?.isIntersecting]);

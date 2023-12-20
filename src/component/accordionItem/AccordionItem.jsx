@@ -18,17 +18,17 @@ import "./AccordionItem.scss";
 
 const AccordionItem = ({ title, description, itemIndexHandler, isOpen }) => {
   const [cardHeight, setCardHeight] = useState(null);
-  const [sizeChange, setSizeChange] = useState(true);
+  const [isReady, setIsReady] = useState(false);
   const [ref, { height }] = useMeasure();
 
   const accordionType = useContext(AccordionTypesContext);
 
   useEffect(() => {
-    if (typeof height === "number" && sizeChange) {
+    if (typeof height === "number" && !isReady) {
       setCardHeight(height);
-      setSizeChange(false);
+      setIsReady(true);
     }
-  }, [height, sizeChange]);
+  }, [height, isReady]);
 
   //Анімація компонента
   const config = { mass: 1 };
@@ -39,7 +39,7 @@ const AccordionItem = ({ title, description, itemIndexHandler, isOpen }) => {
   }));
 
   useEffect(() => {
-    if (cardHeight || accordionType) {
+    if (isReady && (cardHeight || accordionType)) {
       textApi.start({
         ...config,
         to: { height: 0 },
