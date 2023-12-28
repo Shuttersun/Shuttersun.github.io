@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState, useContext, memo } from "react";
 import { animated, useSpring } from "react-spring";
 import { useMeasure } from "@uidotdev/usehooks";
 import PropTypes from "prop-types";
@@ -16,10 +16,17 @@ import "./AccordionItem.scss";
  * @returns {JSX.Element} - відображений елемент.
  */
 
-const AccordionItem = ({ title, description, itemIndexHandler, isOpen }) => {
+const AccordionItem = memo(function AccordionItem({
+  title,
+  description,
+  itemIndexHandler,
+  isOpen,
+}) {
   const [cardHeight, setCardHeight] = useState(null);
   const [isReady, setIsReady] = useState(false);
   const [ref, { height }] = useMeasure();
+
+  // console.log("render");
 
   const accordionType = useContext(AccordionTypesContext);
 
@@ -39,7 +46,7 @@ const AccordionItem = ({ title, description, itemIndexHandler, isOpen }) => {
   }));
 
   useEffect(() => {
-    if (isReady && (cardHeight || accordionType)) {
+    if ((isReady && cardHeight) || accordionType) {
       textApi.start({
         ...config,
         to: { height: 0 },
@@ -106,7 +113,7 @@ const AccordionItem = ({ title, description, itemIndexHandler, isOpen }) => {
       <span className="accordion-item__divider"></span>
     </li>
   );
-};
+});
 
 AccordionItem.propTypes = {
   title: PropTypes.string.isRequired,
