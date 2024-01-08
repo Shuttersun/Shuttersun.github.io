@@ -1,12 +1,19 @@
-import Promo from "../../component/promo/Promo";
-import ProductList from "../../component/productList/ProductList";
-import HowWork from "../../component/howWork/HowWork";
-import CalcFormModule from "../../component/calcFormModule/CalcFormModule";
-import QuestionForm from "../../component/questionForm/QuestionForm";
-import Footer from "../../component/footer/Footer";
+import { lazy } from "react";
 import UpArrow from "../../component/upArrow/UpArrow";
-
 import "./MainPage.scss";
+
+const Promo = lazy(() => import("../../component/promo/Promo"));
+const ProductList = lazy(() =>
+  import("../../component/productList/ProductList")
+);
+const HowWork = lazy(() => import("../../component/howWork/HowWork"));
+const CalcFormModule = lazy(() =>
+  import("../../component/calcFormModule/CalcFormModule")
+);
+const QuestionForm = lazy(() =>
+  import("../../component/questionForm/QuestionForm")
+);
+const Footer = lazy(() => import("../../component/footer/Footer"));
 
 const MainPage = () => {
   return (
